@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,20 +11,26 @@ export default function Home() {
       <nav className="flex justify-between items-center px-10 py-6 shadow-sm bg-white/80 backdrop-blur-md">
         <h1 className="text-2xl font-extrabold text-indigo-700">SkillEdge</h1>
         <div className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <a href="#features" className="hover:text-indigo-600">Features</a>
-          <a href="#about" className="hover:text-indigo-600">About</a>
-          <a href="#contact" className="hover:text-indigo-600">Contact</a>
+          <Link href="#features" className="hover:text-indigo-600">
+            Features
+          </Link>
+          <Link href="#about" className="hover:text-indigo-600">
+            About
+          </Link>
+          <Link href="#contact" className="hover:text-indigo-600">
+            Contact
+          </Link>
         </div>
         <div className="flex gap-4">
-          <a href="/signin" className="px-5 py-2 text-indigo-600 font-medium hover:underline">
+          <Link href="/signin" className="px-5 py-2 text-indigo-600 font-medium hover:underline">
             Sign In
-          </a>
-          <a
+          </Link>
+          <Link
             href="/signup"
             className="px-5 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -45,18 +53,18 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4 mt-8 justify-center md:justify-start">
-            <a
+            <Link
               href="/signup"
               className="px-6 py-3 bg-indigo-600 text-white rounded-xl text-lg font-medium shadow-lg hover:bg-indigo-700"
             >
               Get Started
-            </a>
-            <a
+            </Link>
+            <Link
               href="#features"
               className="px-6 py-3 border border-indigo-600 text-indigo-700 rounded-xl text-lg font-medium hover:bg-indigo-50"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -67,10 +75,12 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="mt-10 md:mt-0"
         >
-          <img
+          <Image
             src="/ai-illustration.png"
             alt="AI Interview"
-            className="w-[400px] md:w-[500px] drop-shadow-xl rounded-2xl"
+            width={500}
+            height={400}
+            className="drop-shadow-xl rounded-2xl"
           />
         </motion.div>
       </section>
@@ -81,7 +91,6 @@ export default function Home() {
           Why Choose SkillEdge?
         </h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-          {/* Feature 1 */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-md text-center"
@@ -93,7 +102,6 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Feature 2 */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-md text-center"
@@ -105,7 +113,6 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Feature 3 */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-md text-center"
@@ -119,7 +126,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-6 text-center text-gray-500 bg-white shadow-inner">
         © {new Date().getFullYear()} SkillEdge — All Rights Reserved
       </footer>

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Signup() {
   return (
@@ -12,10 +13,7 @@ export default function Signup() {
             "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80')",
         }}
       >
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Text content */}
         <div className="relative max-w-md text-center">
           <h1 className="text-6xl font-extrabold mb-6 drop-shadow-lg">
             Join SkillEdge
@@ -73,13 +71,13 @@ export default function Signup() {
 
           <p className="text-center text-gray-600 mt-6">
             Already have an account?{" "}
-            <a href="/signin" className="text-indigo-600 font-medium hover:underline">
+            <Link href="/signin" className="text-indigo-600 font-medium hover:underline">
               Sign In
-            </a>
+            </Link>
           </p>
 
           <p className="text-center text-gray-600 mt-2">
-            ← <a href="/" className="text-indigo-600 font-medium hover:underline">Back to Home</a>
+            ← <Link href="/" className="text-indigo-600 font-medium hover:underline">Back to Home</Link>
           </p>
         </div>
       </motion.div>

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Signin() {
   return (
@@ -12,17 +13,13 @@ export default function Signin() {
             "url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=80')",
         }}
       >
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Text content */}
         <div className="relative max-w-md text-center">
           <h1 className="text-6xl font-extrabold mb-6 drop-shadow-lg">
             Welcome Back
           </h1>
           <p className="text-xl font-medium drop-shadow-md">
-            Practice, prepare and get job-ready with{" "}
-            <span className="font-bold">SkillEdge</span>.
+            Practice, prepare and get job-ready with <span className="font-bold">SkillEdge</span>.
           </p>
         </div>
       </div>
@@ -58,9 +55,9 @@ export default function Signin() {
               <label className="flex items-center gap-2">
                 <input type="checkbox" className="w-4 h-4" /> Remember Me
               </label>
-              <a href="#" className="text-indigo-600 hover:underline">
+              <Link href="#" className="text-indigo-600 hover:underline">
                 Forgot Password?
-              </a>
+              </Link>
             </div>
 
             <motion.button
@@ -75,13 +72,13 @@ export default function Signin() {
 
           <p className="text-center text-gray-600 mt-6">
             New user?{" "}
-            <a href="/signup" className="text-indigo-600 font-medium hover:underline">
+            <Link href="/signup" className="text-indigo-600 font-medium hover:underline">
               Create an account
-            </a>
+            </Link>
           </p>
 
           <p className="text-center text-gray-600 mt-2">
-            ← <a href="/" className="text-indigo-600 font-medium hover:underline">Back to Home</a>
+            ← <Link href="/" className="text-indigo-600 font-medium hover:underline">Back to Home</Link>
           </p>
         </div>
       </motion.div>
